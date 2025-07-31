@@ -1,3 +1,35 @@
+# layout_calendar
+
+🔗 [Demonstração ao vivo](https://layout-calendar-ivanivaldo.surge.sh)
+
+Projeto de calendário criado com SCSS, BEM e Flexbox.
+
+---
+
+## Calendar
+
+Display a calendar in the middle of the screen (both horizontally and vertically).
+Use SCSS and follow BEM methodology.
+
+### Requirements:
+
+- Use Flexbox for positioning.
+- Use `::before` para numerar os dias.
+- Use `@for` para gerar os 31 dias.
+- Use modificadores como `calendar--start-day-1` ... `calendar--start-day-7` para indicar o primeiro dia da semana.
+- Use `calendar--month-length-28` ... `calendar--month-length-31` para controlar a quantidade de dias exibidos.
+- Adicione efeito hover com animação nos dias.
+- Layout limpo e fiel ao Figma.
+
+---
+
+## Como rodar localmente:
+
+```bash
+npm install
+npm start
+
+
 # Calendar
 
 Display a calendar in the middle of the screen (both horizontally and vertically). Use SCSS and follow BEM. Don't use Javascript.

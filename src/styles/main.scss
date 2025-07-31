@@ -1,0 +1,53 @@
+@use 'variables';
+@use 'calendar';
+
+
+$cell-size: 40px;
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(7 * #{$cell-size});
+  font-family: sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+
+  &__day {
+    width: $cell-size;
+    height: $cell-size;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+    background-color: white;
+
+    &::before {
+      content: attr(data-day);
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      font-size: 10px;
+      color: #999;
+    }
+
+    &:hover {
+      background-color: #f2f2f2;
+      transition: background-color 0.3s;
+    }
+  }
+
+  // modificadores
+  @for $i from 1 through 7 {
+    &--start-#{$i} > .calendar__day:first-child {
+      margin-left: calc(($i - 1) * #{$cell-size});
+    }
+  }
+
+  @for $length from 28 through 31 {
+    &--length-#{$length} > .calendar__day:nth-child(n + #{$length + 1}) {
+      display: none;
+    }
+  }
+}

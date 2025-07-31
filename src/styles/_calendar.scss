@@ -1,0 +1,63 @@
+@use 'variables' as vars;
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(vars.$day-size * 7 + vars.$gap-size * 6 + vars.$padding-calendar * 2);
+  padding: vars.$padding-calendar;
+  gap: vars.$gap-size;
+  margin: auto;
+  position: relative;
+
+  &__day {
+    position: relative;
+    width: vars.$day-size;
+    height: vars.$day-size;
+    background-color: vars.$day-bg;
+    border: vars.$day-border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    transition:
+      background-color vars.$animation-duration,
+      transform vars.$animation-duration;
+
+    &::before {
+      content: '';
+      font-family: Arial, sans-serif;
+      font-size: vars.$day-font-size;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: vars.$hover-color;
+      transform: translateY(-20px);
+    }
+  }
+
+  @for $i from 1 through 31 {
+    &__day:nth-child(#{$i})::before {
+      content: '#{$i}';
+    }
+  }
+
+  &--start-day-mon {
+    & > .calendar__day:nth-child(1) {
+      margin-left: calc(vars.$day-size + vars.$gap-size);
+    }
+  }
+
+  &--month-length-28 {
+    & > .calendar__day:nth-child(n + 29) {
+      display: none;
+    }
+  }
+
+  // Você pode adicionar os outros modificadores start-day e month-length aqui
+}
