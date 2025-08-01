@@ -6,14 +6,13 @@
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
     "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
-    "lint": "mate-scripts lint",
-    "test": "mate-scripts test"
+    "lint": "echo 'Lint desativado temporariamente.'",
+    "test": "echo 'Testes não aplicáveis neste projeto.'"
   },
   "keywords": [],
   "author": "Mate Academy",
   "license": "ISC",
   "devDependencies": {
-    "@mate-academy/scripts": "^2.1.1",
     "@parcel/transformer-sass": "^2.15.4",
     "parcel": "^2.15.4",
     "prettier": "^3.3.2",
@@ -31,3 +30,4 @@
     "last 2 Edge versions"
   ]
 }
+

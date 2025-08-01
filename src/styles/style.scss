@@ -1,6 +1,5 @@
 @use './variables';
 @use './calendar';
-@import './main';
 
 $day-size: 100px;
 $day-border: 1px solid black;
@@ -52,28 +51,21 @@ $animation-duration: 0.5s;
     }
   }
 
-  // Aqui entra o @for para colocar o número no ::before
   @for $i from 1 through 31 {
     &__day:nth-child(#{$i})::before {
       content: '#{$i}';
     }
   }
 
-  // Modificadores start-day (exemplo para segunda)
   &--start-day-mon {
     & > .calendar__day:nth-child(1) {
       margin-left: calc(#{$day-size} + #{$gap-size});
     }
   }
 
-  // ... outros modificadores start-day
-
-  // Modificadores month-length (exemplo para 28 dias)
   &--month-length-28 {
     & > .calendar__day:nth-child(n + 29) {
       display: none;
     }
   }
-
-  // ... outros month-length
 }

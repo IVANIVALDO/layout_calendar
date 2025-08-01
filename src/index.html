@@ -2,14 +2,20 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calendário</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-   <link rel="stylesheet" href="./styles/style.scss" />
+
+  <!-- Estilos SCSS compilados devem ser linkados aqui -->
+  <link rel="stylesheet" href="./styles/main.scss" />
 </head>
 <body>
-  <div class="calendar calendar--month-length-31 calendar--start-day-sun">
-    <!-- 31 dias -->
+  <!--
+    Modificadores importantes:
+    - calendar--start-day-thursday: define o dia da semana em que o mês começa
+    - calendar--month-length-31: define o número total de dias do mês
+  -->
+  <div class="calendar calendar--start-day-thursday calendar--month-length-31">
+    <!-- Dias do mês gerados via SCSS com @for (visualização estática para referência): -->
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
@@ -17,7 +23,6 @@
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
-
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
@@ -25,7 +30,6 @@
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
-
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
@@ -33,15 +37,11 @@
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
-
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
-    <div class="calendar__day"></div>
-    <div class="calendar__day"></div>
-
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>
     <div class="calendar__day"></div>

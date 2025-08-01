@@ -1,36 +1,49 @@
 # layout_calendar
 
-Projeto de calendário criado com SCSS, BEM e Flexbox.
+Projeto de calendário desenvolvido como parte da tarefa da [Mate Academy](https://mate.academy/).
 
-🔗 [Demonstração ao vivo](https://layout-calendar-ivanivaldo.surge.sh)
+LINK DE DWMONSTRAÇÃO: 🔗 layout-calendar-ivanivaldo.surge.sh
+---
+
+##  Objetivo
+
+Criar um layout de calendário usando apenas **HTML** e **SCSS**, atendendo aos seguintes requisitos:
+
+- Estrutura semântica utilizando **Flexbox**;
+- Estilização com metodologia **BEM** e SCSS modularizado;
+- Uso do pseudo-elemento `::before` para inserir os números dos dias;
+- Geração dinâmica dos 31 dias com `@for` no SCSS;
+- Suporte a modificadores para:
+  - Início do mês (`calendar--start-day-*`);
+  - Tamanho do mês (`calendar--month-length-*`);
+- Animação de hover nas células do calendário;
+- Estilização consistente via variáveis SCSS globais.
 
 ---
 
-Este projeto exibe um calendário centralizado na tela (horizontal e verticalmente) usando SCSS e Flexbox.  
-O calendário possui 31 dias gerados via CSS (sem números no HTML), com modificadores para início da semana e comprimento do mês.
+##  Estrutura de arquivos
 
-## Como executar
+```text
+layout_calendar/
+├── src/
+│   ├── index.html
+│   └── styles/
+│       ├── _calendar.scss
+│       ├── _variables.scss
+│       └── main.scss
+├── package.json
+├── .gitignore
+├── README.md
 
-- Usar `npm run start` para rodar localmente com Parcel  
-- Usar `npm run build` para compilar a versão final
 
-## Tecnologias
 
-- SCSS  
-- Flexbox  
-- BEM
+Tecnologias Utilizadas
+HTML5
 
----
+SCSS (Sass) com modularização e metodologia BEM
 
-## Checklist da tarefa
+Flexbox para construção do layout
 
-- [x] Calendário centralizado horizontal e verticalmente  
-- [x] Dias gerados via CSS usando `::before` e `@for`  
-- [x] Modificadores `start-day` e `month-length` implementados  
-- [x] Hover rosa com animação e movimentação para cima  
-- [x] Usado Parcel para build e importação direta de SCSS
+Parcel como bundler
 
----
-
-Link da demonstração:  
-https://layout-calendar-ivanivaldo.surge.sh
+Surge para deploy estático
